@@ -1,4 +1,4 @@
-			</article>
+			</div><?php // end blockorder-small ?>
 			
 			<footer role="contentinfo">
 			</footer>

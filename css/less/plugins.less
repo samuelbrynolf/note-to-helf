@@ -1,1 +1,18 @@
-/* plugins */
+// Infinite loader
+
+#infscr-loading{
+	padding: @guttersmallhalf;
+	background: white;
+	
+	@media screen and (min-width: @mediumquery) {
+		padding: @guttermediumhalf;
+	}
+	
+	@media screen and (min-width: @largequery) {
+		padding: @gutterlargehalf;
+	}
+	
+	img{
+		display: none !important;
+	}
+}

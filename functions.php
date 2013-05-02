@@ -41,34 +41,35 @@ if ( function_exists('register_sidebar') )
 		
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
+    add_theme_support( 'post-formats', array('aside', 'link'));
 }
 
-function textCol($atts, $content = null) {
-	return '<div class="col colPad"><p>'.$content.'</p></div>';
+function preamble($atts, $content = null) {
+	return '<div class="l-container"><div class="l-span-S12>"<p class="preamble">'.$content.'</p></div></div>';
 }
-add_shortcode('kolumn', 'textCol');
-
-function textColLast($atts, $content = null) {
-	return '<div class="col"><p>'.$content.'</p></div><div class="clear"></div>';
-}
-add_shortcode('sista_kolumn', 'textColLast');
+add_shortcode('ingress', 'preamble');
 
 function sc_list($atts, $content = null) {
   extract(shortcode_atts(array(
           "cat" => ''
   ), $atts));
-  $myposts = get_posts('numberposts=-1&order=DESC&orderby=post_date&category_name='.$cat);
-  
-  //BUILD HTML
-  $return='<ul class="l-container">';
-  foreach($myposts as $post) :
-   	$content = apply_filters('the_content', $post->post_content);
-		$return.='<li class="l-span-small-12"><h2><a href="'.get_permalink($post->ID).'">'.$post->post_title.'</a></h2>';
-		$return.= $content.'</li>';
-  endforeach;
-  $return.='</ul>';
-  return $return;
+	
+	// BUILD HTML
+	
+  echo '<ul class="l-container">';
+		$custom_query = new WP_Query('nopaging=true&category_name='.$cat); 
+		while($custom_query->have_posts()) : $custom_query->the_post();
+  		echo '<li class="l-span-S12"><a href="'.get_permalink().'"><h2>'.get_the_title().'</h2><p>'.get_the_time('j F, Y').'</p><p>'.get_the_excerpt().'</p></a></li>';
+		endwhile;
+		wp_reset_postdata(); // reset the query 
+  echo '</ul>';
+ 
 } add_shortcode('postlist', 'sc_list');
 
+
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
 
 ?>

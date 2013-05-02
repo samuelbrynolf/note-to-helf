@@ -18,12 +18,17 @@ body{
   line-height: @leading;
   text-rendering: optimizeLegibility;
   color: @bodycolor;
+  overflow-x:hidden;
   background-color: @body;
 }
 
 a{
+	text-decoration: none;
+	color: @bodycolor;
+}
+
+a h2{
   color: @link;
-  text-decoration: none;
 }
 
 input,

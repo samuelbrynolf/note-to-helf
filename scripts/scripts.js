@@ -10,7 +10,7 @@
     function smallSize(){
         var size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
         if (size.indexOf("smallscreen") !=-1){
-			//Scripts runned on small screens
+				$('#resources').insertBefore('#m-article-footer').addClass('s-is-moved');
 			
         }
     }

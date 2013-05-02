@@ -1,4 +1,3 @@
-<?php global $idobject; ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -28,23 +27,29 @@
 <body <?php body_class(); ?>>
 
 	<header class="l-container m-global-header" role="banner">
-		<?php if (is_home()) { ?>
-			<h1><?php bloginfo('blogtitle'); ?></h1>
-		<?php } else { ?>
-			<h2><?php bloginfo('blogtitle'); ?></h2>
-		<?php }?>
-		<a href="#m-global-nav">Meny</a>
+		<div class="l-span-S12">
+			<?php if (is_home()) { ?>
+				<h1><?php bloginfo('blogtitle'); ?></h1>
+			<?php } else { ?>
+				<h2><?php bloginfo('blogtitle'); ?></h2>
+			<?php }?>
+			<a href="#m-global-nav">Meny</a>
+		</div>
 	</header>
 	
 	<div class="l-blockorder">
 		<div class="l-container m-global-nav" id="m-global-nav" role="navigation">
 			<?php wp_nav_menu(array('container' => 'nav', 'container_class' => 'l-span-small-12',)); ?>
-			<?php include('searchform.php'); ?>
+		</div>
+		<div class="l-container">
+			<div class="l-span-S12">
+				<?php include('searchform.php'); ?>
+			</div>
 		</div>
 		
-		<article class="l-blockorder-small m-main">
+		<div class="l-blockorder-small m-main">
 		
-			<section class="s-is-hidden">
+			<section class="m-index s-is-hidden">
 					<header class="l-container">
 						<div class="l-span-S12">
 							<h1>Index: <?php bloginfo('blogname'); ?></h1>
