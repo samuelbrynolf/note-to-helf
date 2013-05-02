@@ -53,24 +53,22 @@ function textColLast($atts, $content = null) {
 }
 add_shortcode('sista_kolumn', 'textColLast');
 
-function sc_liste($atts, $content = null) {
-        extract(shortcode_atts(array(
-                "cat" => ''
-        ), $atts));
-        $myposts = get_posts('numberposts=-1&order=DESC&orderby=post_date&category_name='.$cat);
-        
-        //BUILD HTML
-        $return='<ul class="l-container">';
-        foreach($myposts as $post) :
-	        setup_postdata($post);
-	        $content = get_the_content();
-	       	$content = apply_filters('the_content', $content);
-					$return.='<li class="l-span-small-12"><h2><a href="'.get_permalink().'">'.the_title("","",false).'</a></h2>';
-					$return.= $content.'</li>';
-        endforeach;
-        $return.='</ul> ';
-        return $return;
-} add_shortcode("list", "sc_liste");
+function sc_list($atts, $content = null) {
+  extract(shortcode_atts(array(
+          "cat" => ''
+  ), $atts));
+  $myposts = get_posts('numberposts=-1&order=DESC&orderby=post_date&category_name='.$cat);
+  
+  //BUILD HTML
+  $return='<ul class="l-container">';
+  foreach($myposts as $post) :
+   	$content = apply_filters('the_content', $post->post_content);
+		$return.='<li class="l-span-small-12"><h2><a href="'.get_permalink($post->ID).'">'.$post->post_title.'</a></h2>';
+		$return.= $content.'</li>';
+  endforeach;
+  $return.='</ul>';
+  return $return;
+} add_shortcode('postlist', 'sc_list');
 
 
 ?>

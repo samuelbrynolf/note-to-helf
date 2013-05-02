@@ -16,7 +16,7 @@
 	
 	<?php $kategorinamn = get_post_meta($post->ID, 'kategori-namn', true);
   if ( $kategorinamn ) {
-		echo do_shortcode('[list cat="'.$kategorinamn.'"]');
+		echo do_shortcode('[postlist cat="'.$kategorinamn.'"]');
 	}
 }} 
 
