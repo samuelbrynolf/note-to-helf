@@ -1,0 +1,72 @@
+
+
+
+// GLOBALS
+//==============================================================================================================
+
+html{
+  -webkit-tap-highlight-color : rgba(0,0,0,0.2);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body{
+  .bodyfontsize();
+  font-family: sans-serif;
+  line-height: @leading;
+  text-rendering: optimizeLegibility;
+  color: @bodycolor;
+  background-color: @body;
+}
+
+a{
+  color: @link;
+  text-decoration: none;
+}
+
+input,
+button{
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+em{
+  font-style: italic;
+}
+
+strong{
+  font-weight: bold;
+}
+
+
+
+// MEDIA RWD
+//==============================================================================================================
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+
+// NON-STYLING GLOBAL BEHAVIOURS
+//==============================================================================================================
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
