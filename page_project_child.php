@@ -1,4 +1,4 @@
-<?php /* Template Name: + Child of Project-parent */ ?>
+<?php /* Template Name: Project-Child */ ?>
 
 <?php get_header(); ?>
 
