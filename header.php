@@ -46,7 +46,7 @@
 		
 			<section class="s-is-hidden">
 					<header class="l-container">
-						<div class="l-span-small-12">
+						<div class="l-span-S12">
 							<h1>Index: <?php bloginfo('blogname'); ?></h1>
 						</div>
 					</header>
@@ -55,7 +55,7 @@
 						<?php $tags = get_tags();
 							if ($tags) {
 							foreach ($tags as $tag) {
-								echo '<li class="l-span-small-12"><a href="' . get_tag_link( $tag->term_id ) . '" title="' . sprintf( __( "See allt inom &auml;mnet %s" ), $tag->name ) . '" ' . '>' . $tag->name .'<span>('. $tag->count.')</span></a></li>';
+								echo '<li class="l-span-S12"><a href="' . get_tag_link( $tag->term_id ) . '" title="' . sprintf( __( "See allt inom &auml;mnet %s" ), $tag->name ) . '" ' . '>' . $tag->name .'<span>('. $tag->count.')</span></a></li>';
 							}
 						} ?>
 				</ul>

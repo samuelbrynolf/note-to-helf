@@ -4,11 +4,11 @@
 
 	the_post_thumbnail('large', array('class' => 'm-listitem-thumbnail')); ?>
 	<div class="l-container">
-		<header class="l-span-small-12">
+		<header class="l-span-S12">
 			<h1><?php the_title(); ?></h1>
 		</header>
 		
-		<div class="l-span-small-12">
+		<div class="l-span-S12">
 			<?php the_content(); ?>
 		</div>
 		

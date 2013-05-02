@@ -6,7 +6,7 @@
 <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
 	<?php the_post_thumbnail('large', array('class' => 'm-listitem-thumbnail')); ?>
 	<div class="l-container">
-		<header class="l-span-small-12">
+		<header class="l-span-S12">
 			<hgroup>
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?><?php // OBS använd h2 ?>
@@ -17,7 +17,7 @@
 
 <aside>
 		<header class="l-container">
-			<div class="l-span-small-12">
+			<div class="l-span-S12">
 				<h1>Projekt</h1>
 			</div>
 		</header>
