@@ -14,9 +14,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
-    
-    <script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/modernizr-all.js"></script>
-    <!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/html5shiv.js"></script><![endif]-->
+    <script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/modernizr.js"></script>
+    <!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie9/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 8]>
+    	<script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie8/respond.min.js"></script>
+    	<script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie8/getComputedStyle.js"></script>	
+    <![endif]-->
     
     <title>Note to helf</title>
     <?php wp_head(); ?>
