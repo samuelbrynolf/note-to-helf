@@ -1,6 +1,6 @@
 			</div><?php // end blockorder-small ?>
 			
-			<footer role="contentinfo">
+			<footer class="m-global-footer" role="contentinfo">
 			</footer>
 		</div> <?php // end .l-blockorder ?>
 

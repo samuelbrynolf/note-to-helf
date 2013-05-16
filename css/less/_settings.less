@@ -16,34 +16,33 @@
 
 // 1 -----------------------------------------------------------------------------------------------------------
 
-@bodyfontsize: 				14; // 14px 		(Used in mixin ".bodyfontsize()")
-@bodyleading: 				20; // 20px 		(Use as variable: "@leading")
+@bodyfontsize: 				16; // 14px 		(Used in mixin ".bodyfontsize()")
+@bodyleading: 				24; // 20px 		(Use as variable: "@leading")
 
 // 2 -----------------------------------------------------------------------------------------------------------
 
-@columnguttersmall:		10; // 10px 		(Use as variable: "@guttersmall" and "@guttersmallhalf")
+@columnguttersmall:		12; // 10px 		(Use as variable: "@guttersmall" and "@guttersmallhalf")
 @columnguttermedium:	20; // 20px 		(Use as variable: "@guttermedium" and "@guttermediumhalf")
 @columngutterlarge:  	40; // 40px 		(Use as variable: "@gutterlarge" and "@gutterlargehalf")
 
 // 3 -----------------------------------------------------------------------------------------------------------
 
-@mediumbreakpoint:  	768;  // 768px  	(Use as variable: "@mediumquery")
-@largebreakpoint:   	1024; // 1024px 	(Use as variable: "@largequery")
+@mediumbreakpoint:  	769;  // 768px  	(Use as variable: "@mediumquery")
+@largebreakpoint:   	1025; // 1024px 	(Use as variable: "@largequery")
 @maxwidth:						1780; // 1780px 	(Use as variable: "@containerwidth")
 
 // 4 -----------------------------------------------------------------------------------------------------------
 
-// Shorten long fontfamily textstrings + set them global. Example: 
-// @bodyregular: 'Univers LT W01 55 Roman';
+ @serif: georgia, serif;
 
 // 5 -----------------------------------------------------------------------------------------------------------
 
-@body: 													white;
-@bodycolor: 										#333;
-@bodycolortransparent: 					rgba(0,0,0,0.85);
+@body: 													#ddd8cd;
+@bodylighten: 									lighten(@body, 10%);
+@bodycolor: 										#14191a;
 @subtle: 												#999;
 @lightensubtle: 								lighten(@subtle, 27%);
-@link: 													blue;
+@link: 													#04acd0;
 @linktransparent: 							rgba(0, 131, 223, 0.98);
 @accentprimary: 								#3399cc;
 @accentsecondary: 							#ffcb05;

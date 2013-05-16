@@ -3,20 +3,17 @@
 // GLOBAL RULES
 //==============================================================================================================
 
-.t-xxlarge,
-.t-xlarge,
 .t-large,
 .t-medium,
-.m-media-description h2,
-.m-article-singleContent h2,
-.m-article-singleContent h3,
-#content.widecolumn h2 {
+.m-pagination-next {
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	font-weight: bold;
 
-  	a{
+  	a,
+  	span{
     	font-weight: inherit;
   	}
 }
@@ -30,8 +27,10 @@ p+p{
 // FONTS
 //==============================================================================================================
 
-.example{
-
+#menu-anchor,
+.t-small,
+.m-listitem p {
+	font-family: @serif;
 }
 
 
@@ -48,11 +47,12 @@ p+p{
 }
 
 .t-medium{
-
+	.type-to-em(18,24);
 }
 
 .t-small {
-	
+	.type-to-em(12,18);
+	font-style: italic;
 }
 
 
@@ -68,6 +68,46 @@ p+p{
 // TYPESETTINGS FOR SPECIFIC MODULES
 //==============================================================================================================
 
-.m-example{
-	line-height: 999999999;
+#menu-anchor{
+	.type-to-em(13,60);
+	text-align: center;
+	font-style: italic;
+}
+
+.m-global-header .t-small{
+	line-height: 2.8333em;
+}
+
+.m-listitem .t-medium{
+	padding-top: 1.1666667em;
+	margin-bottom: 0.375em;
+	
+	span{
+		color: white;
+		text-transform: uppercase;
+		opacity: 0.8;
+	}
+}
+
+.m-listitem p {
+	.type-to-em(12,18);
+	font-style: italic;
+}
+
+.m-listitem.has-thumb{
+	.t-medium{
+		padding-left: 0.6667em;
+		padding-right: 0.6667em;
+	}
+	
+	p{
+		padding-left: 1em;
+		padding-right: 1em; 
+	}
+	
+}
+
+.m-pagination-next{
+	.type-to-em(12,36);
+	text-transform: uppercase;
 }

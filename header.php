@@ -22,18 +22,25 @@
     
     <title>Note to helf</title>
     <?php wp_head(); ?>
+    
+    	<script>
+				/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+				if (!pageYOffset) window.scrollTo(0, 1);
+			}, 50);
+			</script>
 </head>
 
 <body <?php body_class(); ?>>
 
 	<header class="l-container m-global-header" role="banner">
 		<div class="l-span-S12">
+			<p class="t-small"><?php bloginfo('description'); ?></p>
 			<?php if (is_home()) { ?>
-				<h1><?php bloginfo('blogtitle'); ?></h1>
+				<h1><a class="ir" id="blogname" href="<?php bloginfo('url'); ?>" title=""><?php bloginfo('blogtitle'); ?></a></h1>
 			<?php } else { ?>
-				<h2><?php bloginfo('blogtitle'); ?></h2>
+				<h2><a class="ir" id="blogname" href="<?php bloginfo('url'); ?>" title=""><?php bloginfo('blogtitle'); ?></a></h2>
 			<?php }?>
-			<a href="#m-global-nav">Meny</a>
+			<a id="menu-anchor" href="#m-global-nav">Meny</a>
 		</div>
 	</header>
 	
@@ -41,7 +48,7 @@
 		<div class="l-container m-global-nav" id="m-global-nav" role="navigation">
 			<?php wp_nav_menu(array('container' => 'nav', 'container_class' => 'l-span-small-12',)); ?>
 		</div>
-		<div class="l-container">
+		<div class="l-container m-global-search">
 			<div class="l-span-S12">
 				<?php include('searchform.php'); ?>
 			</div>

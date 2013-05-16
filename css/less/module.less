@@ -1,1 +1,150 @@
-/* modules */
+.m-global-header{
+	padding-top: @guttersmall;
+	padding-bottom: @leading;
+	color: #01242c;
+	background: @link;
+	
+	a{
+		color: white;
+	}
+}
+
+.m-global-nav{
+	background: @bodylighten;
+}
+
+.m-global-search{
+	background: @bodylighten;
+}
+
+#menu-anchor{
+	position: absolute;
+	top: @guttersmall;
+	right: @guttersmall;
+	display: block;
+	width: 4.615em;
+	height: 4.615em;
+	.rounded-corners(50%);
+	z-index: 20;
+	background: lighten(@link, 6%);
+	
+	@media screen and (min-width: @largequery) {
+		display: none;
+	}
+}
+
+#blogname{
+	width: 100%;
+	height: 2.125em;
+	background: transparent url('img/logo-hires.png') no-repeat;
+	background-size: 18.5em 2.125em;
+}
+
+.m-listitem{
+	padding-bottom: 1.3125em; 
+	border-top: 0.1875em solid lighten(@body, 8%);
+	
+	&:nth-child(1){
+		border-top: none;
+	}
+	
+	a{
+		color: @bodycolor;
+	}
+	
+	[class*='category-']{
+		position: relative;
+		margin-left: 4.667em;
+		
+		&:before{
+			content: 'LO';
+			display: block;
+			width: 3.667em;
+			height: 3.667em;
+			position: absolute;
+			top: -0.25em;
+			left: -4.667em;
+			.rounded-corners(50%);
+			background: white;
+		}
+	}
+	
+	.category-lankar:before{
+		content: 'LI';
+	}
+	
+	.category-dagsanteckningar{
+		position: relative;
+		margin-left: 0;
+		
+		&:before{
+			content: '';
+			display: none;
+			width: 3.667em;
+			height: 3.667em;
+			position: absolute;
+			top: -0.25em;
+			left: -4.667em;
+			.rounded-corners(50%);
+			background: white;
+		}
+	}
+	
+	&.has-thumb{
+		padding-bottom: @gutterlarge;
+
+		.t-medium{
+			position: relative;
+			z-index: 20;
+			margin-top: -@guttersmall;
+			.rounded-corners(2px 2px 0 0);
+			background: @body;
+		}
+		
+		figure{
+			margin-right: -@guttersmall;
+			margin-left: -@guttersmall;
+			
+			@media screen and (min-width: @mediumquery) {
+				margin-right: -@guttermedium;
+				margin-left: -@guttermedium;
+			}
+			
+			@media screen and (min-width: @largequery) {
+				margin-right: -@gutterlarge;
+				margin-left: -@gutterlarge;
+			}
+		}
+		
+		[class*='category-']:before{
+			left: -3.667em; // ajajaj
+		}
+	}
+}
+
+.has-thumb + .has-thumb{
+	border-top: none;
+}
+
+.m-pagination{
+	border-top: 0.375em solid @link;
+	background: @bodylighten;
+	
+	.m-pagination-next{
+		float: right;
+		padding: 0 @guttermedium 0.375em @guttermedium;
+		text-align: center;
+		.rounded-corners(0 0 6px 6px);
+		.gradient(darken(@link, 5%), darken(@link, 5%), @link)
+	}
+	
+	a{
+		display: block;
+		width: auto;
+		color: white;
+	}
+}
+
+.m-global-footer{
+	background: @bodylighten;
+}
