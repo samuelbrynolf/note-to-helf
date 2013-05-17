@@ -57,20 +57,27 @@
 		margin-left: 4.667em;
 		
 		&:before{
-			content: 'LO';
+			content: ' \22';
 			display: block;
-			width: 3.667em;
-			height: 3.667em;
+			font-size: 2em;
+			font-family: 'icons-nth';
 			position: absolute;
-			top: -0.25em;
-			left: -4.667em;
+			top: -0.125em;
+			left: -2.335em;
+			width: 1.833em;
+			height: 1.833em;
+			padding-top: 0.17em;
+			padding-left: 0.26em;
 			.rounded-corners(50%);
+			color: @body;
 			background: white;
 		}
 	}
 	
 	.category-lankar:before{
-		content: 'LI';
+		content: "\23";
+		padding-top: 0.18em;
+		padding-left: 0.34em;
 	}
 	
 	.category-dagsanteckningar{
@@ -80,13 +87,7 @@
 		&:before{
 			content: '';
 			display: none;
-			width: 3.667em;
-			height: 3.667em;
-			position: absolute;
-			top: -0.25em;
-			left: -4.667em;
-			.rounded-corners(50%);
-			background: white;
+			background: transparent;
 		}
 	}
 	
@@ -117,7 +118,7 @@
 		}
 		
 		[class*='category-']:before{
-			left: -3.667em; // ajajaj
+			left: -1.834em; // ajajaj
 		}
 	}
 }

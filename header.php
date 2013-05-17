@@ -12,12 +12,16 @@
     <meta name="MobileOptimized" content="320"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400italic,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
     <script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/modernizr.js"></script>
     <!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie9/html5shiv.js"></script><![endif]-->
     <!--[if lte IE 8]>
     	<script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie8/respond.min.js"></script>
     	<script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie8/getComputedStyle.js"></script>	
+    <![endif]-->
+    <!--[if lte IE 7]>
+    	<script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie7/icons-lte-ie7.js"></script>	
     <![endif]-->
     
     <title>Note to helf</title>
