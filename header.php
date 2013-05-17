@@ -59,7 +59,7 @@
 		</div>
 		
 		<div class="l-blockorder-small m-main">
-		
+		<!--
 			<section class="m-index s-is-hidden">
 					<header class="l-container">
 						<div class="l-span-S12">
@@ -76,3 +76,4 @@
 						} ?>
 				</ul>
 			</section>
+			-->

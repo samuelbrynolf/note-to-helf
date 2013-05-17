@@ -14,7 +14,7 @@ html{
 
 body{
   .bodyfontsize();
-  font-family: sans-serif;
+  font-family: @serif;
   line-height: @leading;
   text-rendering: optimizeLegibility;
   color: @bodycolor;
@@ -46,7 +46,10 @@ strong{
   font-weight: bold;
 }
 
-
+pre,
+code{
+	font-family: monospace;
+}
 
 // MEDIA RWD
 //==============================================================================================================

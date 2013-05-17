@@ -44,11 +44,6 @@ if (function_exists('add_theme_support')) {
     add_theme_support( 'post-formats', array('aside', 'link'));
 }
 
-function preamble($atts, $content = null) {
-	return '<div class="l-container"><div class="l-span-S12>"<p class="preamble">'.$content.'</p></div></div>';
-}
-add_shortcode('ingress', 'preamble');
-
 function sc_list($atts, $content = null) {
   extract(shortcode_atts(array(
           "cat" => ''
