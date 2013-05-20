@@ -92,12 +92,12 @@
 	border-top: none;
 }
 
-[class*='category-']{
+.item-type{
 		position: relative;
 		margin-left: 4.667em;
 		
 		&:before{
-			content: ' \22';
+			content: ' ';
 			display: block;
 			font-size: 2em;
 			font-family: 'icons-nth';
@@ -114,21 +114,16 @@
 		}
 	}
 	
-	.category-lankar:before{
+	.item-type.log:before{
+			content: ' \22';
+			padding-top: 0.17em;
+			padding-left: 0.26em;
+	}
+	
+	.item-type.link:before{
 		content: "\23";
 		padding-top: 0.18em;
 		padding-left: 0.34em;
-	}
-	
-	.category-dagsanteckningar{
-		position: relative;
-		margin-left: 0;
-		
-		&:before{
-			content: '';
-			display: none;
-			background: transparent;
-		}
 	}
 
 .m-article{
