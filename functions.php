@@ -1,16 +1,4 @@
-<?php add_action('init', 'register_my_menu');
-function register_my_menu(){
-	register_nav_menu('navigation', __('Huvudnavigation'));
-}
-
-add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
-add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
-function remove_thumbnail_dimensions( $html ) {
-    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-    return $html;
-}
-
-function complete_version_removal() {
+<?php function complete_version_removal() {
 	return '';
 }	
 
@@ -28,6 +16,22 @@ function blog_favicon() {
 }
 add_action('wp_head', 'blog_favicon');
 
+function register_my_menu(){
+	register_nav_menu('navigation', __('Huvudnavigation'));
+}
+add_action('init', 'register_my_menu');
+
+if ( ! function_exists( 'post_is_in_descendant_category' ) ) {
+	function post_is_in_descendant_category( $cats, $_post = null ) {
+		foreach ( (array) $cats as $cat ) {
+			// get_term_children() accepts integer ID only
+			$descendants = get_term_children( (int) $cat, 'category' );
+			if ( $descendants && in_category( $descendants, $_post ) )
+				return true;
+		}
+		return false;
+	}
+}
 
 if ( function_exists('register_sidebar') )
 		register_sidebar(array(
@@ -42,6 +46,13 @@ if ( function_exists('register_sidebar') )
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
     add_theme_support( 'post-formats', array('aside', 'link'));
+}
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+function remove_thumbnail_dimensions( $html ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
 }
 
 function sc_list($atts, $content = null) {
