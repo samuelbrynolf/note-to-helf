@@ -55,41 +55,21 @@
 	a p{
 		color: lighten(@bodycolor, 7%);
 	}
-	
-	&.has-thumb{
-		padding-bottom: @gutterlarge;
-
-		.t-medium{
-			position: relative;
-			z-index: 20;
-			margin-top: -@guttersmall;
-			.rounded-corners(2px 2px 0 0);
-			background: @body;
+		
+	figure{
+		margin-right: -@guttersmall;
+		margin-left: -@guttersmall;
+		
+		@media screen and (min-width: @mediumquery) {
+			margin-right: -@guttermedium;
+			margin-left: -@guttermedium;
 		}
 		
-		figure{
-			margin-right: -@guttersmall;
-			margin-left: -@guttersmall;
-			
-			@media screen and (min-width: @mediumquery) {
-				margin-right: -@guttermedium;
-				margin-left: -@guttermedium;
-			}
-			
-			@media screen and (min-width: @largequery) {
-				margin-right: -@gutterlarge;
-				margin-left: -@gutterlarge;
-			}
-		}
-		
-		[class*='category-']:before{
-			left: -1.834em; // ajajaj
+		@media screen and (min-width: @largequery) {
+			margin-right: -@gutterlarge;
+			margin-left: -@gutterlarge;
 		}
 	}
-}
-
-.has-thumb + .has-thumb{
-	border-top: none;
 }
 
 .item-type{
@@ -115,13 +95,13 @@
 	}
 	
 	.item-type.log:before{
-			content: ' \22';
+			content: '\22';
 			padding-top: 0.17em;
 			padding-left: 0.26em;
 	}
 	
 	.item-type.link:before{
-		content: "\23";
+		content: '\23';
 		padding-top: 0.18em;
 		padding-left: 0.34em;
 	}
@@ -147,11 +127,23 @@
 	background: @bodylighten;
 	
 	.m-pagination-next{
+		position: relative;
 		float: right;
-		padding: 0 @guttermedium 0.375em @guttermedium;
-		text-align: center;
+		padding: 0 3em 0.375em 1.5em;
+		text-align: left;
 		.rounded-corners(0 0 6px 6px);
-		.gradient(darken(@link, 5%), darken(@link, 5%), @link)
+		background: @link;
+		
+		&:after{
+			content: '\29';
+			display: block;
+			position: absolute;
+			font-size: 1.5em;
+			top: -0.5em;
+			right: 0.63em;
+			font-family: 'icons-nth';
+			color: white;
+		}
 	}
 	
 	a{

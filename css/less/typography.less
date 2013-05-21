@@ -23,13 +23,10 @@
 //==============================================================================================================
 
 #menu-anchor,
-.t-small,
 .m-listitem p {
 	font-family: @serif;
 }
 
-.t-large,
-.t-medium,
 .m-pagination-next {
 	font-family: @sans-serif;
 }
@@ -46,15 +43,22 @@
 .t-large{
 	.type-to-em(21,27);
 	margin-top: 1em;
+	font-family: @sans-serif;
 }
 
 .t-medium{
 	.type-to-em(18,24);
+	font-family: @sans-serif;
 }
 
 .t-small {
 	.type-to-em(12,18);
+	font-family: @serif;
 	font-style: italic;
+	
+	a{
+		font-style: italic;
+	}
 }
 
 .t-preamble p{

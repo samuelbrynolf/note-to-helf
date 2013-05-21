@@ -26,8 +26,11 @@
     function smallSize(){
         var size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
         if (size.indexOf("smallscreen") !=-1){
-				$('#resources').insertBefore('#m-article-footer').addClass('s-is-moved');
-			
+        
+	        var resources = $('#resources');
+	        if(resources.length > 0){
+	        	resources.insertBefore('#m-article-footer').addClass('s-is-moved');
+					}			
         }
     }
 	

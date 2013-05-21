@@ -1,18 +1,23 @@
 // Infinite loader
 
 #infscr-loading{
-	padding: @guttersmallhalf;
-	background: white;
+	padding: @guttersmall;
+	text-align: center;
+	background: @bodylighten;
 	
 	@media screen and (min-width: @mediumquery) {
-		padding: @guttermediumhalf;
+		padding: @guttermedium;
 	}
 	
 	@media screen and (min-width: @largequery) {
-		padding: @gutterlargehalf;
+		padding: @guttermedium @guttermedium @guttermedium @gutterlarge;
 	}
 	
 	img{
 		display: none !important;
+	}
+	
+	em{
+		.type-to-em(12,18);
 	}
 }
