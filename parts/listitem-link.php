@@ -6,7 +6,7 @@
 					<?php the_post_thumbnail('large', array('class' => 'm-listitem-thumbnail')); ?>
 				</figure>
 			<?php } ?>
-			<h2 class="t-medium">Hittad &amp; gillad: <?php the_title(); ?></h2>
+			<h2 class="t-medium">L&auml;nk: <?php the_title(); ?></h2>
 			<p class="t-small item-type link">
 				<?php echo 'Delad den '.get_the_time('j F Y').'<br/>';
 		  	echo strip_tags(get_the_tag_list('',' + ','')); ?>

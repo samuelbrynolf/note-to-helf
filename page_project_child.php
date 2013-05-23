@@ -41,7 +41,7 @@
 <aside>
 	<header class="l-container">
 		<div class="l-span-S12">
-			<h1>Projekt</h1>
+			<h1>Fler loggar:</h1>
 		</div>
 	</header>
 	<ul class="l-container">
@@ -53,11 +53,11 @@
 			continue;
 			$content = apply_filters( 'the_content', $content );
 			//BUILD HTML
-			echo '<li class="l-span-S12">';
+			echo '<li class="l-span-S12"><a href="'.get_page_link( $page->ID ).'">';
 			if ( $thumbnail ) {
 				echo '<figure><img src="'.$thumbnail[0].'" alt="" /></figure>'; 
 			} 
-			echo '<a href="'.get_page_link( $page->ID ).'"><h2>'.$page->post_title.'</h2>'.$content.'</a></li>';
+			echo '<h2>'.$page->post_title.'</h2></a></li>';
 		}	?>
 	</ul>
 </aside>

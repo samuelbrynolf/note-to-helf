@@ -65,7 +65,7 @@ function sc_list($atts, $content = null) {
   echo '<ul class="l-container">';
 		$custom_query = new WP_Query('nopaging=true&category_name='.$cat); 
 		while($custom_query->have_posts()) : $custom_query->the_post();
-  		echo '<li class="l-span-S12"><a href="'.get_permalink().'"><h2>'.get_the_title().'</h2><p>'.get_the_time('j F, Y').'</p><p>'.get_the_excerpt().'</p></a></li>';
+  		echo '<li class="l-span-S12"><a href="'.get_permalink().'"><h2>'.get_the_title().'</h2><p>'.get_the_time('j F, Y').'</p>'.get_secondary_content( 'Ingress' ).'</a></li>';
 		endwhile;
 		wp_reset_postdata(); // reset the query 
   echo '</ul>';
