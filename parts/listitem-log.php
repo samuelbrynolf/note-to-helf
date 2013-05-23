@@ -11,9 +11,10 @@
 			<h2 class="t-medium"><?php echo $category[0]->cat_name.': &#8220;'.get_the_title(); ?>&#8221;</h2>
 			<p class="t-small item-type log">
 				<?php echo 'Projektlogg: '.get_the_time('j F Y').'<br/>';
-				if(has_tag()){
 		  	echo strip_tags(get_the_tag_list('',' + ','')); 
-		  	}; ?>
+		  	if(!has_tag()) {
+		  		echo '<br />';
+		  	} ?>
 			</p>
 		</section>
 	</a><?php // end .l-span-S12 ?>

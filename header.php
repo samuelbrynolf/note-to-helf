@@ -12,7 +12,7 @@
     <meta name="MobileOptimized" content="320"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     
-    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400italic,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
     <script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/modernizr.js"></script>
     <!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie9/html5shiv.js"></script><![endif]-->

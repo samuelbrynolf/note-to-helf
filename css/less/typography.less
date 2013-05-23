@@ -42,8 +42,11 @@
 
 .t-large{
 	.type-to-em(21,27);
-	margin-top: 1em;
+	margin-top: 0.8571em; // 18px
 	font-family: @sans-serif;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .t-medium{
@@ -96,19 +99,6 @@
 	margin-bottom: 0.375em;
 }
 
-.m-listitem.has-thumb{
-	.t-medium{
-		padding-left: 0.6667em;
-		padding-right: 0.6667em;
-	}
-	
-	p{
-		padding-left: 1em;
-		padding-right: 1em; 
-	}
-	
-}
-
 .m-pagination-next{
 	.type-to-em(12,36);
 	text-transform: uppercase;
@@ -116,17 +106,21 @@
 
 .m-the-content{
 
-	h2,
-	h3{
-		font-family: @sans-serif;
-		font-weight: bold;
-	}
-	
 	h2{
 		margin: @gutterlarge 0 @guttersmall;
 		padding-bottom: @guttersmall;
 		text-transform: uppercase;
 		border-bottom: 0.1875em solid @bodylighten;
+	}
+	
+	h3{
+		margin-top: 1.7142em; // 24px
+	}
+
+	h2,
+	h3{
+		font-family: @sans-serif;
+		font-weight: bold;
 	}
 	
 	h3,
@@ -135,38 +129,6 @@
 	ol,
 	pre{
 		.type-to-em(14,24);
-	}
-	
-	p+p,
-	p+pre,
-	pre+p,
-	p+code,
-	code+p,
-	p+ul,
-	p+ol{
-		margin-top: 1.7142em; // 24px
-	}
-	
-	li+li{
-		margin-top: @guttersmall;
-	}
-	
-	ul,
-	ol,
-	pre,
-	code{
-		margin-bottom: 1.7142em; // 24px
-	}
-	
-	h3{
-		margin-top: 1.7142em; // 24px
-	}
-	
-	pre,
-	code{
-		margin-left: @guttersmall;
-		color: black;
-		white-space: normal;
 	}
 	
 	ul{
@@ -179,7 +141,30 @@
 		list-style-type: lower-roman;
 	}
 	
-	p{
+	li+li{
+		margin-top: @guttersmall;
+	}
+	
+	pre,
+	code{
+		margin-left: @guttersmall;
+		color: black;
+		white-space: normal;
+	}
+	
+	p,
+	pre,
+	code,
+	ul,
+	ol{
+		margin-bottom: 1.7142em; // 24px
+	}
+	
+	h2,
+	h3,
+	p,
+	pre,
+	code{
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;

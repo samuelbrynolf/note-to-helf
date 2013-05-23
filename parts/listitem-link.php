@@ -9,7 +9,10 @@
 			<h2 class="t-medium">L&auml;nk: <?php the_title(); ?></h2>
 			<p class="t-small item-type link">
 				<?php echo 'Delad den '.get_the_time('j F Y').'<br/>';
-		  	echo strip_tags(get_the_tag_list('',' + ','')); ?>
+		  	echo strip_tags(get_the_tag_list('',' + ','')); 
+		  	if(!has_tag()) {
+		  		echo '<br />';
+		  	} ?>
 			</p>
 		</section>
 	</a><?php // end .l-span-S12 ?>

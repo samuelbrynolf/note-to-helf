@@ -4,9 +4,16 @@
 <div class="l-container">
 	<div class="l-span-S12 l-span-M3 l-pre-M3">
 		<p class="t-small<?php if (post_is_in_descendant_category( 63 )) { ?> item-type log<?php } ?>">
-			<?php echo $category[0]->cat_name.': '.get_the_time('j F, Y').'<br/>';
-			echo strip_tags(get_the_tag_list('',' + ','')); ?>
+			<?php the_category(' '); ?>: <?php the_time('j F Y'); ?><br/>
+			<?php the_tags('',' + '); ?>
+			<?php if (post_is_in_descendant_category( 63 )) { ?>
+				<br/>
+			<?php } ?>
 		</p>
+	</div>
+	
+	<div class="l-span-S12 l-span-M8 l-pre-M3">
+		<div class="m-divider"></div>
 	</div>
 </div>
 
