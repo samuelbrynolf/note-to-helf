@@ -5,7 +5,7 @@
 	
 		<?php if ( has_post_thumbnail() ) { ?>
 			<figure>
-				<?php the_post_thumbnail('large', array('class' => 'm-listitem-thumbnail')); ?>
+				<?php the_post_thumbnail('large', array('class' => 'm-single-thumbnail')); ?>
 			</figure>
 		<?php } ?>
 	

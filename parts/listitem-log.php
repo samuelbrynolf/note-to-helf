@@ -9,10 +9,7 @@
 				<h2 class="t-medium"><?php the_title(); ?></h2>
 				<p class="t-small">
 					<?php echo 'Projektlogg: '.get_the_time('j F Y').'<br/>';
-			  	echo strip_tags(get_the_tag_list('',' + ',''));
-			  	if(!has_tag()) {
-			  		echo '<br />';
-			  	} ?>
+			  	echo strip_tags(get_the_tag_list('',' + ','')); ?>
 				</p>
 			</section>
 		</a>
@@ -26,10 +23,7 @@
 				<h2 class="t-medium"><?php the_title(); ?></h2>
 				<p class="t-small">
 					<?php echo 'Projektlogg: '.get_the_time('j F Y').'<br/>';
-		  		echo strip_tags(get_the_tag_list('',' + ',''));
-		  		if(!has_tag()) {
-		  			echo '<br />';
-		  		} ?>
+		  		echo strip_tags(get_the_tag_list('',' + ','')); ?>
 				</p>
 			</section>
 		</a>

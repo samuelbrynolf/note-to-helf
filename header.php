@@ -14,7 +14,7 @@
     
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
-    <script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/modernizr.js"></script>
+    <!-- <script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/modernizr.js"></script> -->
     <!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie9/html5shiv.js"></script><![endif]-->
     <!--[if lte IE 8]>
     	<script src="<?php bloginfo('template_directory'); ?>/scripts/browsersupport/ie8/respond.min.js"></script>
@@ -29,8 +29,8 @@
     
     	<script>
 				/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-				if (!pageYOffset) window.scrollTo(0, 1);
-			}, 50);
+  				if (!pageYOffset) window.scrollTo(0, 1);
+				}, 500);
 			</script>
 </head>
 
