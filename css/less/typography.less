@@ -3,9 +3,12 @@
 // GLOBAL RULES
 //==============================================================================================================
 
+.t-xlarge,
 .t-large,
 .t-medium,
-.m-pagination-next {
+.m-pagination-next,
+.nextpostslink,
+.previouspostslink {
   -webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smoothing: antialiased;
@@ -27,7 +30,9 @@
 	font-family: @serif;
 }
 
-.m-pagination-next {
+.m-pagination-next,
+.nextpostslink,
+.previouspostslink {
 	font-family: @sans-serif;
 }
 
@@ -37,7 +42,9 @@
 //==============================================================================================================
 
 .t-xlarge {
-
+	.type-to-em(24,30);
+	font-family: @sans-serif;
+	padding-top: 0.625em; // 15px
 }
 
 .t-large{
@@ -54,7 +61,8 @@
 	font-family: @sans-serif;
 }
 
-.t-small {
+.t-small,
+.wp-pagenavi .pages {
 	.type-to-em(12,18);
 	font-family: @serif;
 	font-style: italic;
@@ -68,10 +76,16 @@
 	.type-to-em(16,24);
 	//font-style: italic;
 	margin: 0.75em 0 1.3125em 0; // 18px
-	padding-bottom: 1.25em;
+	padding-bottom: 1.3125em;
 	//border-top: 0.1875em solid @bodylighten;
 	border-bottom: 0.1875em solid @bodylighten;
 	//color: #000;
+}
+
+/* CLASS-COMBOS */
+
+.t-xlarge + .t-small{
+	margin-top: 0.25em;
 }
 
 
@@ -100,7 +114,9 @@
 	margin-bottom: 0.333em; // 6px
 }
 
-.m-pagination-next{
+.m-pagination-next,
+.nextpostslink,
+.previouspostslink{
 	.type-to-em(12,36);
 	text-transform: uppercase;
 }
@@ -170,4 +186,15 @@
 		-moz-hyphens: auto;
 		hyphens: auto;
 	}
+}
+
+.m-taxonomy-header .t-xlarge{
+	border-top: 1px solid lighten(@link, 5%);
+	.box-shadow(0 -1px darken(@link, 12%));
+	text-shadow: 0 1px 1px darken(@link, 12%);
+}
+
+.m-taxonomy-header .t-small{
+	margin-right: 1em;
+	margin-left: 1em;
 }

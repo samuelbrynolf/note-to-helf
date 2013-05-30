@@ -1,4 +1,5 @@
-// Infinite loader
+// INFINITE LOADER
+//==============================================================================================================
 
 #infscr-loading{
 	background: @link;
@@ -17,5 +18,48 @@
 	
 	em{
 		.type-to-em(12,18);
+	}
+}
+
+
+
+// WP PAGENAVI
+//==============================================================================================================
+
+.wp-pagenavi{
+	position: relative;
+
+	.page,
+	.current{
+		display: none;
+	}
+	
+	.pages{
+		display: block;
+		padding-top: @guttersmall;
+	}
+
+	.nextpostslink,
+	.previouspostslink{
+		position: absolute;
+		width: 36%;
+		top: 0;
+		padding: 0 1em 0.375em 1em;
+		text-align: center;
+		background: @link;
+	}
+	
+	.nextpostslink{
+		right: 2%;
+		z-index: 10;
+		.rounded-corners(0 0 6px 6px);
+	}
+	
+	.previouspostslink{
+		right: 36%;
+		z-index: 20;
+		.rounded-corners(0 0 0 6px);
+		border-right: 1px solid darken(@link, 5%);
+		.box-shadow(1px 0 0 lighten(@link, 7%));
 	}
 }

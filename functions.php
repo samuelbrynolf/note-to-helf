@@ -33,6 +33,8 @@ if ( ! function_exists( 'post_is_in_descendant_category' ) ) {
 	}
 }
 
+remove_filter('term_description','wpautop');
+
 if ( function_exists('register_sidebar') )
 		register_sidebar(array(
 			'name'=>'Sidopanel',
