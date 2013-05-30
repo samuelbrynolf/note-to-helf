@@ -44,7 +44,6 @@
 .t-xlarge {
 	.type-to-em(24,30);
 	font-family: @sans-serif;
-	padding-top: 0.625em; // 15px
 }
 
 .t-large{
@@ -189,12 +188,8 @@
 }
 
 .m-taxonomy-header .t-xlarge{
+	padding-top: 0.5em; // 12px
+	text-shadow: 0 1px 1px darken(@link, 12%);
 	border-top: 1px solid lighten(@link, 5%);
 	.box-shadow(0 -1px darken(@link, 12%));
-	text-shadow: 0 1px 1px darken(@link, 12%);
-}
-
-.m-taxonomy-header .t-small{
-	margin-right: 1em;
-	margin-left: 1em;
 }

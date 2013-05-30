@@ -6,7 +6,7 @@
 			<div class="l-span-S12">
 				<h1 class="t-xlarge"><?php single_tag_title(); ?></h1>
 				<?php if(tag_description()) {?>
-					<p class="t-small">&#187; <?php echo tag_description(); ?> &#171;</p>
+					<p class="t-small"><?php echo tag_description(); ?></p>
 				<?php } ?>
 			</div>
 		</header>

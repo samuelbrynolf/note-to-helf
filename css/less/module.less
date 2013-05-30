@@ -1,3 +1,10 @@
+
+
+
+
+// HEADERS
+//==============================================================================================================
+
 .m-global-header{
 	padding-top: @guttersmall;
 	padding-bottom: @leading;
@@ -9,13 +16,14 @@
 	}
 }
 
-.m-global-nav{
-	background: @bodylighten;
+#blogname{
+	width: 100%;
+	height: 2.125em;
+	background: transparent url('img/logo-hires.png') no-repeat;
+	background-size: 18.5em 2.125em;
 }
 
-.m-global-search{
-	background: @bodylighten;
-}
+/* Menu-items */
 
 #menu-anchor{
 	position: absolute;
@@ -33,20 +41,37 @@
 	}
 }
 
-#blogname{
-	width: 100%;
-	height: 2.125em;
-	background: transparent url('img/logo-hires.png') no-repeat;
-	background-size: 18.5em 2.125em;
+.m-global-nav{
+	background: @bodylighten;
 }
+
+.m-global-search{
+	background: @bodylighten;
+}
+
+.archive .m-global-header{
+	padding-bottom: 1.125em; //18px
+}
+
+.m-taxonomy-header{
+	padding-bottom: 0.9375em; // 15px
+	color: white;
+	text-align: center;
+	background: @link;
+}
+
+.m-article-header{
+	margin-bottom: 0.5625em; // 9px
+}
+
+
+
+// LIST-MODULE
+//==============================================================================================================
 
 .m-listitem{
 	padding-bottom: 1.125em; // 18px
 	border-top: 0.1875em solid @bodylighten;
-	
-	&:nth-child(1){
-		border-top: none;
-	}
 	
 	a .t-medium{
 		color: @bodycolor;
@@ -86,6 +111,8 @@
 	}
 }
 
+/* Item type */
+
 .item-type{
 	position: relative;
 	margin-left: 4.667em;
@@ -104,7 +131,7 @@
 		padding-left: 0.26em;
 		.rounded-corners(50%);
 		color: @body;
-		background: @bodylighten;
+		background: white;
 	}
 }
 	
@@ -120,16 +147,10 @@
 	padding-left: 0.34em;
 }
 
-.m-taxonomy-header{
-	padding-bottom: 1.3125em; // 21px
-	color: white;
-	text-align: center;
-	background: @link;
-}
 
-.m-article-header{
-	margin-bottom: 0.5625em; // 9px
-}
+
+// ARTICLE MODULES AND ELEMENTS
+//==============================================================================================================
 
 .m-the-content{
 	
@@ -158,6 +179,11 @@
 		margin: 0 @guttersmall @guttersmallhalf 0;
 	}
 }
+
+
+
+// FOOTER MODULES AND ELEMENTS
+//==============================================================================================================
 
 .m-pagination{
 	border-top: 0.375em solid @link;
@@ -194,8 +220,19 @@
 	background: @bodylighten;
 }
 
+
+
+// TINY-TINY MODULES || HELPCLASSES
+//==============================================================================================================
+
 .m-divider{
 	height: 0.1875em;
 	margin: 1.125em 0; // 18px
 	background: @bodylighten;
+}
+
+.ir{
+  text-indent: -9999px;
+  display: block;
+  overflow: hidden;
 }

@@ -5,7 +5,7 @@
 		<header class="l-container m-taxonomy-header">
 			<div class="l-span-S12">
 				<h1 class="t-xlarge"><?php single_cat_title(); ?></h1>
-				<p class="t-small">&#187; <?php echo category_description(); ?> &#171;</p>
+				<p class="t-small"><?php echo category_description(); ?></p>
 			</div>
 		</header>
 		
