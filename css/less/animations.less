@@ -1,8 +1,8 @@
 // TRANSITIONS
 //==============================================================================================================
 
-.example {
-	.transition (color, 0.1s, ease-in-out);
+.parent {
+	.transition (background, 1s, ease-in-out);
 }
 
 
@@ -17,11 +17,18 @@
   animation:         fadein 2s 1; /* IE 10+ */
 }
 
-#infscr-loading{
+#infscr-loading {
 	-webkit-animation: loader 1s infinite; /* Safari 4+ */
   -moz-animation:    loader 1s infinite; /* Fx 5+ */
   -o-animation:      loader 1s infinite; /* Opera 12+ */
   animation:         loader 1s infinite; /* IE 10+ */
+}
+
+.m-global-nav.s-is-alert{
+	-webkit-animation: notice 1.5s 0.7s 2; /* Safari 4+ */
+  -moz-animation:    notice 1.5s 0.7s 2; /* Fx 5+ */
+  -o-animation:      notice 1.5s 0.7s 2; /* Opera 12+ */
+  animation:         notice 1.5s 0.7s 2; /* IE 10+ */
 }
 
 /* KEYFRAME FADEIN */
@@ -64,4 +71,27 @@
   0%   	{ height: 0; background: @link;  }
   50% 	{ height: @gutterlarge; background: @accentsecondary; }
   100%  { height: 0; background: @link;  }
+}
+
+/* KEYFRAME NOTICE */
+
+@-webkit-keyframes notice {
+  0%   	{ background: @link; }
+ 	50% 	{ background: darken(@link, 3%);}
+  100%  { background: @link; }
+}
+@-moz-keyframes notice {
+  0%   	{ background: none;  }
+ 	50% 	{ background: darken(@link, 3%);}
+  100%  { background: none;  }
+}
+@-o-keyframes notice {
+  0%   	{ background: none;  }
+  50%  	{ background: darken(@link, 3%);}
+  100%  { background: none;  }
+}
+@keyframes notice {
+  0%   	{ background: none;  }
+ 	50% 	{ background: darken(@link, 3%);}
+  100%  { background: none;  }
 }

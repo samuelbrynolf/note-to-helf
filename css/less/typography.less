@@ -8,7 +8,8 @@
 .t-medium,
 .m-pagination-next,
 .nextpostslink,
-.previouspostslink {
+.previouspostslink,
+.menu-item a{
   -webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smoothing: antialiased;
@@ -32,7 +33,8 @@
 
 .m-pagination-next,
 .nextpostslink,
-.previouspostslink {
+.previouspostslink,
+.menu-item a{
 	font-family: @sans-serif;
 }
 
@@ -91,7 +93,13 @@
 // CUSTOM TEXTTRANSFORMS
 //==============================================================================================================
 
-
+.m-pagination-next,
+.nextpostslink,
+.previouspostslink,
+.menu-item a{
+	.type-to-em(12,36);
+	text-transform: uppercase;
+}
 
 
 
@@ -111,13 +119,6 @@
 .m-listitem .t-medium{
 	padding-top: 1em; // 18px
 	margin-bottom: 0.333em; // 6px
-}
-
-.m-pagination-next,
-.nextpostslink,
-.previouspostslink{
-	.type-to-em(12,36);
-	text-transform: uppercase;
 }
 
 .m-the-content{

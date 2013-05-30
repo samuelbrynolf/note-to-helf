@@ -50,7 +50,7 @@
 	
 	<div class="l-blockorder">
 		<div class="l-container m-global-nav" id="m-global-nav" role="navigation">
-			<?php wp_nav_menu(array('container' => 'nav', 'container_class' => 'l-span-small-12',)); ?>
+			<?php wp_nav_menu(array('container' => 'nav', 'container_class' => 'l-span-S12',)); ?>
 		</div>
 		<div class="l-container m-global-search">
 			<div class="l-span-S12">

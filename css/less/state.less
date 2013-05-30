@@ -27,6 +27,20 @@ body:after {
 // ACTIVE STATES
 //==============================================================================================================
 
+.parent.s-is-active{
+	background: darken(@link, 3%);
+}
+
+.parent.s-is-active:after{
+	content: '\28';
+}
+
+.parent.s-is-active > a{
+	text-indent: @guttersmall;
+	border-bottom-color: white;
+	border-bottom-color: rgba(255,255,255,0.7);
+}
+
 // PASSIVE STATES
 //==============================================================================================================
 

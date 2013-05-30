@@ -36,18 +36,22 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/*.icon-arrow, .icon-paperplane, .icon-link, .icon-eye, .icon-bolt, .icon-code, .icon-lock, .icon-minus, .icon-plus, .icon-twitter, .icon-search, .icon-cross, .icon-list {
+
+
+.parent:after,
+.item-type:before {
 	font-family: 'icons-nth';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: 1;
+	//line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smoothing: antialiased;
-}*/
+}
+
 .icon-arrow:before {
 	content: "\21";
 }

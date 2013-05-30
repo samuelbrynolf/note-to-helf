@@ -9,6 +9,8 @@
     devStyleHelp();
     
     function helpers(){
+    
+    	// Smooth scroll for anchors
     	$('a[href*=#]').on('click', function(e) {
 		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
 	    	&& location.hostname == this.hostname) {
@@ -16,10 +18,23 @@
 	        jQuerytarget = jQuerytarget.length && jQuerytarget || jQuery('[name=' + this.hash.slice(1) +']');
 	        if (jQuerytarget.length) {
 	        	var targetOffset = jQuerytarget.offset().top - 50 ;
-	          $('html,body').animate({scrollTop: targetOffset}, 1000);
+	          $('html,body').animate({scrollTop: targetOffset}, 700);
 	          e.preventDefault();
 	         } 
-	       }  
+	       }
+	       
+	       if($(this).attr('id') === 'menu-anchor') {
+	       	$('#m-global-nav').addClass('s-is-alert');
+	       }
+		 	});
+		 	
+		 	// Submenu interaction
+		 	$('#menu-global-nav').on('click', '.parent > a', function(e){
+		 		var $this = $(this);
+		 		
+		 		$this.parent('.parent').toggleClass('s-is-active').toggleClass('s-is-passive');
+		 		$this.next('.sub-menu').slideToggle('normal');
+		 		e.preventDefault();
 		 	});
     }
 
