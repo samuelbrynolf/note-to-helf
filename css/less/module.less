@@ -42,7 +42,9 @@
 }
 
 .m-global-nav{
-	background: @link;
+	border-top: @guttersmall solid darken(@link, 25%);
+	border-bottom: @guttersmall solid darken(@link, 25%);
+	background: darken(@link, 20%);
 }
 
 .menu{
@@ -54,10 +56,15 @@
 			display: block;
 			padding: 0.5em 0 0.5em;
 			color: white;
+			//color: lighten(@link, 50%);
 			//border-bottom: 0.1875em solid white;
 			//border-bottom: 1px solid darken(@link, 12%);
 			//.box-shadow(0 1px lighten(@link, 5%));
-			border-bottom: 0.1875em solid darken(@link, 4%);
+			border-bottom: 0.1875em solid darken(@link, 25%);
+		}
+		
+		&:last-of-type > a{
+			border-bottom: none;
 		}
 	}
 	
@@ -78,12 +85,11 @@
 		margin: 0 @guttersmall;
 		
 		a{
-			border-bottom: 1px dashed darken(@link, 15%);
-			.box-shadow(none);
+			border-bottom: 1px dashed darken(@link, 10%);
 		}
 		
 		li:last-of-type > a{
-			border-bottom: none;
+			border-bottom: 1px dashed darken(@link, 10%);
 		}
 	}
 }
@@ -225,6 +231,7 @@
 //==============================================================================================================
 
 .m-pagination{
+	padding-bottom: @guttersmall;
 	border-top: 0.375em solid @link;
 	background: @bodylighten;
 	

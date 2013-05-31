@@ -18,7 +18,7 @@
 	        jQuerytarget = jQuerytarget.length && jQuerytarget || jQuery('[name=' + this.hash.slice(1) +']');
 	        if (jQuerytarget.length) {
 	        	var targetOffset = jQuerytarget.offset().top - 50 ;
-	          $('html,body').animate({scrollTop: targetOffset}, 700);
+	          $('html,body').animate({scrollTop: targetOffset}, 400);
 	          e.preventDefault();
 	         } 
 	       }

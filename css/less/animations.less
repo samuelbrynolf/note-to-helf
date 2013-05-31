@@ -24,11 +24,12 @@
   animation:         loader 1s infinite; /* IE 10+ */
 }
 
-.m-global-nav.s-is-alert{
-	-webkit-animation: notice 1.5s 0.7s 2; /* Safari 4+ */
-  -moz-animation:    notice 1.5s 0.7s 2; /* Fx 5+ */
-  -o-animation:      notice 1.5s 0.7s 2; /* Opera 12+ */
-  animation:         notice 1.5s 0.7s 2; /* IE 10+ */
+.m-global-nav.s-is-alert,
+.parent.s-is-active{
+	-webkit-animation: notice 1.8s 0.6s 1; /* Safari 4+ */
+  -moz-animation:    notice 1.8s 0.6s 1; /* Fx 5+ */
+  -o-animation:      notice 1.8s 0.6s 1; /* Opera 12+ */
+  animation:         notice 1.8s 0.6s 1; /* IE 10+ */
 }
 
 /* KEYFRAME FADEIN */
@@ -76,22 +77,22 @@
 /* KEYFRAME NOTICE */
 
 @-webkit-keyframes notice {
-  0%   	{ background: @link; }
- 	50% 	{ background: darken(@link, 3%);}
-  100%  { background: @link; }
+  0%   	{ background: darken(@link, 20%); }
+ 	50% 	{ background: darken(@link, 25%); }
+  100%  { background: darken(@link, 20%); }
 }
 @-moz-keyframes notice {
-  0%   	{ background: none;  }
- 	50% 	{ background: darken(@link, 3%);}
-  100%  { background: none;  }
+  0%   	{ background: darken(@link, 20%); }
+ 	50% 	{ background: darken(@link, 25%); }
+  100%  { background: darken(@link, 20%); }
 }
 @-o-keyframes notice {
-  0%   	{ background: none;  }
-  50%  	{ background: darken(@link, 3%);}
-  100%  { background: none;  }
+  0%   	{ background: darken(@link, 20%); }
+ 	50% 	{ background: darken(@link, 25%); }
+  100%  { background: darken(@link, 20%); }
 }
 @keyframes notice {
-  0%   	{ background: none;  }
- 	50% 	{ background: darken(@link, 3%);}
-  100%  { background: none;  }
+  0%   	{ background: darken(@link, 20%); }
+ 	50% 	{ background: darken(@link, 25%); }
+  100%  { background: darken(@link, 20%); }
 }
