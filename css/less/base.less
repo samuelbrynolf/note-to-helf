@@ -4,33 +4,33 @@
 // GLOBALS
 //==============================================================================================================
 
-html{
-  -webkit-tap-highlight-color : rgba(0,0,0,0.2);
+html{	
+	min-height: 100%;
+	position: relative;
+	.bodyfontsize(18,18);
+  -webkit-tap-highlight-color : rgba(0,0,0,0.1);
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  background-color: @body;
 }
 
 body{
-  .bodyfontsize();
   font-family: @serif;
   line-height: @leading;
   text-rendering: optimizeLegibility;
   color: @bodycolor;
   background-color: @body;
+  
+  @media screen and (min-width: @largequery) {
+  	padding: 0 25%;
+  }
 }
 
 a{
 	text-decoration: none;
-	color: @bodycolor;
-}
-
-input,
-button{
-  font-family: sans-serif;
-  font-size: 1em;
+	//color: darken(@link, 2%);
+	color: @link;
 }
 
 ul,

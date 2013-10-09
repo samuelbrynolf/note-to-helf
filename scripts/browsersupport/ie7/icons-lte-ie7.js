@@ -6,19 +6,17 @@ window.onload = function() {
 		el.innerHTML = '<span style="font-family: \'icons-nth\'">' + entity + '</span>' + html;
 	}
 	var icons = {
-			'icon-arrow' : '&#x21;',
-			'icon-paperplane' : '&#x22;',
-			'icon-link' : '&#x23;',
-			'icon-eye' : '&#x24;',
-			'icon-bolt' : '&#x25;',
-			'icon-code' : '&#x26;',
-			'icon-lock' : '&#x27;',
-			'icon-minus' : '&#x28;',
-			'icon-plus' : '&#x29;',
-			'icon-twitter' : '&#x2a;',
-			'icon-search' : '&#x2b;',
-			'icon-cross' : '&#x2c;',
-			'icon-list' : '&#x2d;'
+			'icon-book-alt2' : '&#xe00a;',
+			'icon-link' : '&#xf0c1;',
+			'icon-twitter' : '&#xf099;',
+			'icon-remove' : '&#xf00d;',
+			'icon-plus' : '&#xf067;',
+			'icon-minus' : '&#xf068;',
+			'icon-reorder' : '&#xf0c9;',
+			'icon-search' : '&#xf002;',
+			'icon-angle-up' : '&#xf106;',
+			'icon-chevron-up' : '&#xf077;',
+			'icon-bookmark' : '&#xf02e;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

@@ -1,34 +1,29 @@
 <?php get_header(); ?>
 
-<article class="m-article">
+<article <?php if (post_is_in_descendant_category( 63 )) { ?>id="set-current-menuItem" <?php } ?>class="m-article">
 	<?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
-	
+		
 		<?php if ( has_post_thumbnail() ) { ?>
-			<figure>
+			<figure class="m-article-figure">
 				<?php the_post_thumbnail('large', array('class' => 'm-single-thumbnail')); ?>
 			</figure>
 		<?php } ?>
 	
 		<header class="l-container m-article-header<?php if ( has_post_thumbnail() ) { ?> has-thumb<?php } ?>">
-			<div class="l-span-S12 l-pre-M3">
+			<?php UA_include('isMobile', 'bookmark.php'); ?>
+			<div class="l-span-S12">
 				<h1 class="t-large"><?php the_title(); ?></h1>
 			</div>
 		</header>
 			
 		<?php if (has_post_format('aside')) { 
-			get_template_part( 'parts/single-aside');
-		} elseif (has_post_format('link')) {
-			get_template_part( 'parts/single-link'); 
+			get_template_part( 'parts/single-aside'); 
 		} else { 
 			get_template_part( 'parts/single-full');
 		} ?>
-	
-		<div class="l-container">
-			<footer class="l-span-S12 l-span-M9 l-pre-M3 m-article-footer" id="m-article-footer">
-				<p>Footer med twitter, namn</p>
-			</footer>
-		</div>
 
+		<?php related_posts(); ?>
+		
 	<?php }} ?>
 	
 </article>

@@ -10,7 +10,7 @@
     
     <meta name="HandheldFriendly" content="True"/>
     <meta name="MobileOptimized" content="320"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
     
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
@@ -35,45 +35,48 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<header class="l-container m-global-header" role="banner">
+	
+	<header class="l-container m-global-header<?php if ( is_single() && !has_post_thumbnail() ) { ?> no-thumb<?php } ?>" id="global-header" role="banner">
 		<div class="l-span-S12">
 			<p class="t-small"><?php bloginfo('description'); ?></p>
 			<?php if (is_home()) { ?>
 				<h1><a class="ir" id="blogname" href="<?php bloginfo('url'); ?>" title=""><?php bloginfo('blogtitle'); ?></a></h1>
 			<?php } else { ?>
-				<h2><a class="ir" id="blogname" href="<?php bloginfo('url'); ?>" title=""><?php bloginfo('blogtitle'); ?></a></h2>
+				<a class="ir" id="blogname" href="<?php bloginfo('url'); ?>" title=""><?php bloginfo('blogtitle'); ?></a>
 			<?php }?>
-			<a id="menu-anchor" href="#m-global-nav">Meny</a>
+			
+			<div id="menu-button" class="m-menu-button">
+				<button class="front">Meny</button>
+				<button class="back">St&auml;ng</button>
+			</div>
+			
 		</div>
 	</header>
 	
-	<div class="l-blockorder">
-		<div class="l-container m-global-nav" id="m-global-nav" role="navigation">
-			<?php wp_nav_menu(array('container' => 'nav', 'container_class' => 'l-span-S12',)); ?>
-		</div>
-		<div class="l-container m-global-search">
-			<div class="l-span-S12">
-				<?php include('searchform.php'); ?>
-			</div>
-		</div>
-		
-		<div class="l-blockorder-small m-main">
-		<!--
-			<section class="m-index s-is-hidden">
-					<header class="l-container">
-						<div class="l-span-S12">
-							<h1>Index: <?php bloginfo('blogname'); ?></h1>
-						</div>
-					</header>
-					
-					<ul class="l-container">
-						<?php $tags = get_tags();
-							if ($tags) {
-							foreach ($tags as $tag) {
-								echo '<li class="l-span-S12"><a href="' . get_tag_link( $tag->term_id ) . '" title="' . sprintf( __( "See allt inom &auml;mnet %s" ), $tag->name ) . '" ' . '>' . $tag->name .'<span>('. $tag->count.')</span></a></li>';
-							}
-						} ?>
-				</ul>
-			</section>
-			-->
+	<nav class="l-container m-global-nav s-is-hidden" id="m-global-nav" role="navigation">
+		<ul id="menu-global-nav" class="l-span-S12 menu">
+			<?php wp_nav_menu(array('container' => '', 'items_wrap' => '%3$s')); ?>
+			<li class="m-global-search"><?php include('parts/searchform.php'); ?></li>
+		</ul>
+	</nav>
+	
+	<?php UA_include('isMobile', 'editable-aside.php'); ?>
+
+	<!--
+		<section class="m-index s-is-hidden">
+				<header class="l-container">
+					<div class="l-span-S12">
+						<h1>Index: <?php bloginfo('blogname'); ?></h1>
+					</div>
+				</header>
+				
+				<ul class="l-container">
+					<?php $tags = get_tags();
+						if ($tags) {
+						foreach ($tags as $tag) {
+							echo '<li class="l-span-S12"><a href="' . get_tag_link( $tag->term_id ) . '" title="' . sprintf( __( "See allt inom &auml;mnet %s" ), $tag->name ) . '" ' . '>' . $tag->name .'<span>('. $tag->count.')</span></a></li>';
+						}
+					} ?>
+			</ul>
+		</section>
+		-->

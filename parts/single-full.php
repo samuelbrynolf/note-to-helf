@@ -2,36 +2,36 @@
 <?php $resources = get_secondary_content( 'Resurser' ); ?>
 
 <div class="l-container">
-	<div class="l-span-S12 l-span-M4<?php if ( !$preamble ) { ?> l-pre-M3<?php } ?>">
-		<p class="t-small<?php if (post_is_in_descendant_category( 63 )) { ?> item-type log<?php } ?>">
-			<?php the_category(' '); ?>: <?php the_time('j F Y'); ?><br/>
+	<div class="l-span-S12 m-article-meta">
+		<p class="t-small<?php if (in_category( 27 )) { ?> item-type link<?php } ?>">
+			<?php the_category(' '); ?> <?php the_time('l j F, Y'); ?><br/>
 			<?php the_tags('',' + '); ?>
-			<?php if (post_is_in_descendant_category( 63 )) { ?>
-				<br/>
-			<?php } ?>
 		</p>
 	</div>
 	
 	<?php if ( $preamble ) { ?>
-		<div class="l-span-S12 l-span-M9 t-preamble">
+		<div class="l-span-S12 t-preamble">
 			<?php echo $preamble; ?>
 		</div>
 	<?php } else { ?>
-		<div class="l-span-S12 l-span-M8 l-pre-M3">
+		<div class="l-span-S12">
 			<div class="m-divider"></div>
 		</div>
 	<?php } ?>
 </div>
 
 <div class="l-container">
+	<?php if( $resources ) { ?>
+		<div class="l-span-S12 m-resources" id="resources">
+			<h2 class="t-small-title">Appendix</h2>
+			<div class="t-small">
+				<?php echo $resources; ?>
+			</div>
+		</div>
+	<?php } ?>
 
-	<?php if( $resources ) {
-		echo '<div class="l-span-S12 l-span-M4 m-resource-full t-small" id="resources">';
-			echo $resources;
-		echo '</div>';
-	} ?>	
-
-	<div class="l-span-S12 l-span-M8 m-the-content<?php if( !$resources ) { ?> l-pre-M3<?php } ?>">
+	<div class="l-span-S12 m-the-content" id="the-content">
 		<?php the_content(); ?>
+		<p>&mdash;</p>
 	</div>
 </div>

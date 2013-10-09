@@ -8,7 +8,7 @@
 			<section class="m-entry">
 				<h2 class="t-medium"><?php the_title(); ?></h2>
 				<p class="t-small">
-					<?php echo 'Publicerad den '.get_the_time('j F Y').'<br/>';
+					<?php echo get_the_time('l j F, Y').'<br/>';
 			  	echo strip_tags(get_the_tag_list('',' + ','')); ?>
 				</p>
 			</section>
@@ -22,7 +22,7 @@
 			<section class="l-span-S12 m-entry">
 				<h2 class="t-medium"><?php the_title(); ?></h2>
 				<p class="t-small">
-					<?php echo 'Publicerad den '.get_the_time('j F Y').'<br/>';
+					<?php echo get_the_time('l j F, Y').'<br/>';
 		  		echo strip_tags(get_the_tag_list('',' + ','')); ?>
 				</p>
 			</section>
