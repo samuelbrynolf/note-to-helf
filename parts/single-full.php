@@ -21,6 +21,11 @@
 </div>
 
 <div class="l-container">
+	<div class="l-span-S12 m-the-content" id="the-content">
+		<?php the_content(); ?>
+		<p>&mdash;</p>
+	</div>
+	
 	<?php if( $resources ) { ?>
 		<div class="l-span-S12 m-resources" id="resources">
 			<h2 class="t-small-title">Appendix</h2>
@@ -29,9 +34,5 @@
 			</div>
 		</div>
 	<?php } ?>
-
-	<div class="l-span-S12 m-the-content" id="the-content">
-		<?php the_content(); ?>
-		<p>&mdash;</p>
-	</div>
+	
 </div>

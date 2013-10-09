@@ -60,7 +60,7 @@
 		</ul>
 	</nav>
 	
-	<?php UA_include('isMobile', 'editable-aside.php'); ?>
+	<?php UA_desktop_include('editable-aside.php'); ?>
 
 	<!--
 		<section class="m-index s-is-hidden">

@@ -141,10 +141,10 @@ function blog_favicon() {
 }
 add_action('wp_head', 'blog_favicon');
 
-function UA_include($condition, $partial){
+function UA_desktop_include($partial){
 	$detect = new Mobile_Detect;
 	
-	if (!$detect->$condition()) {
+	if (!$detect->isMobile()) {
 		include('parts/'.$partial);
 	}
 }

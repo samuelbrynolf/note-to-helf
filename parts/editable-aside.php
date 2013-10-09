@@ -4,13 +4,13 @@
 		
 		<h4 class="t-medium">Bokm&auml;rken</h4>
 		<ul class="m-editable-list user-bookmarks" id="editable-bookmarks">
-			<li id="placeholder">Du har inga sparade bokm&auml;rken...</li>
+			<li id="placeholderBookmarks">Du har inga sparade bokm&auml;rken.</li>
 		</ul>
 		<button class="m-button" id="erase-editable-bookmarks">Radera</button>
 		
 		<h4 class="t-medium">Anteckningar</h4>
 		<ul class="m-editable-list user-notes" id="editable-notes" contenteditable="true">
-			<li>B&ouml;rja anteckna&hellip;</li>
+			<li>B&ouml;rja anteckna.</li>
 		</ul>
 		<button class="m-button" id="erase-editable-notes">Radera</button>
 	</div>

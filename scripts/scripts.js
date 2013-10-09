@@ -1,6 +1,23 @@
+
+// TOC
+//==============================================================================================================
+
+// 1. GLOBAL VARS 						(function)
+// 2. NAVIGATION 							(function)
+// 3. CUSTOM TRAVERSIONS			(function)
+// 4. EDITABLE ASIDE					(function)
+// 5. PLUGINS	SETUP						(function)
+// 6. INIT FUNCTIONS
+
+//==============================================================================================================
+
 (function() {
+
+// 1 -----------------------------------------------------------------------------------------------------------
   
   var size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+  
+// 2 -----------------------------------------------------------------------------------------------------------
   
   function navigation(){
   
@@ -86,20 +103,24 @@
 	 	smoothScroll(); 	
   
   } // end navigation()
+  
+// 3 -----------------------------------------------------------------------------------------------------------
 
   function customTraversions(){
   	
   	function moveResources(){
     	var resources = $('#resources');
   		if(resources.length > 0){
-  			resources.insertAfter('#the-content').addClass('s-is-moved');
+  			resources.insertBefore('#the-content').addClass('s-is-moved');
 			}
 		}
 		
-	 //if (size.indexOf("smallscreen") !=-1 || size.indexOf("mediumscreen") !=-1 || size.indexOf("largescreen") !=-1){
+	 if (size.indexOf("megascreen") !=-1){
 	 	moveResources();
-	 //}
+	 }
   }
+  
+// 4 -----------------------------------------------------------------------------------------------------------
   
   function editableAside(){
   	
@@ -111,6 +132,16 @@
   			toggle.preventDefault();
   		});
   	}
+  	
+  	function eraseStorage(trigger, storedItem,list,listItem){
+  		$(trigger).on('click', function(){
+  			if (localStorage.getItem(storedItem)){
+	  			localStorage.removeItem(storedItem);
+					$(list).children().remove();
+					$(listItem).appendTo($(list));
+				}
+			});
+		}
   	
   	function userBookmarks(){
   		var myBookmarks = document.getElementById('editable-bookmarks');
@@ -129,6 +160,7 @@
 			}
   		
   		$(bookmark).on('click', function(a){
+  		
   			if ($(window).scrollTop() > 60) {
 					$('html, body').animate({ scrollTop: 0 }, 250);
 				}
@@ -148,37 +180,33 @@
 			});
 			
 			$('#erase-editable-bookmarks').on('click', function(){
-				localStorage.removeItem('storedBookmarks');
-				$(myBookmarks).children().remove();
-				$('<li id="placeholder">Du har inga sparade bokm&auml;rken...</li>').appendTo($(myBookmarks));
 				$(bookmark).removeClass('s-is-passive');
 			});
-  	}
-  	
+			
+			eraseStorage('#erase-editable-bookmarks', 'storedBookmarks', myBookmarks, '<li id="placeholder">Du har inga sparade bokm&auml;rken.</li>');
+  	} // end userBookmarks
+				
   	function userNotes(){
 			var myNotes = document.getElementById('editable-notes');
 			
-			$(myNotes).blur(function() {
-			 localStorage.setItem('storedNotes', this.innerHTML);
-			});
-						
-			// when the page loads
 			if (localStorage.getItem('storedNotes')){
 			 myNotes.innerHTML = localStorage.getItem('storedNotes'); 
 			}
 			
-			$('#erase-editable-notes').on('click', function(){
-				localStorage.removeItem('storedNotes');
-				$(myNotes).children().remove();
-				$('<li>B&ouml;rja anteckna&hellip;</li>').appendTo($(myNotes));
+			$(myNotes).blur(function() {
+			 localStorage.setItem('storedNotes', this.innerHTML);
 			});
-  	}
+		
+			eraseStorage('#erase-editable-notes', 'storedNotes', myNotes, '<li>B&ouml;rja anteckna.</li>');
+  	} // end userNotes()
   	
   	toggleEditableAside();
   	userBookmarks();
   	userNotes();
 
-  }; // end notes()
+  }; // end editable aside()
+  
+// 5 -----------------------------------------------------------------------------------------------------------
   
   function plugins(){
   	FastClick.attach(document.body);
@@ -186,8 +214,7 @@
   	$('.gallery').magnificPopup({type:'image'});
   }
   
-//INITS
-//==============================================================================================
+// 6 -----------------------------------------------------------------------------------------------------------
 	
 	navigation();
   customTraversions();

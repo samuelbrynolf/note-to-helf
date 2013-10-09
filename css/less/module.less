@@ -326,12 +326,14 @@
 		display: block;
 		position: absolute;
 		top: @guttersmall;
-		right: @guttersmall;
+		right: @gutterlarge;
+		padding-right: @guttermedium;
 		font-size: 0.875em;
 		
 		&:before{
 			display: block;
 			position: absolute;
+			right: 0;
 			z-index: 100;
 			content: "\f00d";
 		}
@@ -476,19 +478,13 @@
 			width: 3em;
 			height: 3em;
 			text-indent: -9999px;
-			//.rounded-corners(0 0 3px 3px);
-			//border-top: 1px solid lighten(@link, 3%);
-			//background: white;
-			//.box-shadow (0 0 0.13em rgba(0,0,0,0.3));
 		}
 		
 		&:before{
 			display: block;
 			position: absolute;
 			z-index: 20;
-			//left: 0.333em; // 12px
 			top: 0.167em; // 6px
-			//top: 0;
 			right: 0;
 			content: "\f02e";
 			font-size: 3em; // 48px

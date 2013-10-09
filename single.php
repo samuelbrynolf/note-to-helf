@@ -10,7 +10,7 @@
 		<?php } ?>
 	
 		<header class="l-container m-article-header<?php if ( has_post_thumbnail() ) { ?> has-thumb<?php } ?>">
-			<?php UA_include('isMobile', 'bookmark.php'); ?>
+			<?php UA_desktop_include('bookmark.php'); ?>
 			<div class="l-span-S12">
 				<h1 class="t-large"><?php the_title(); ?></h1>
 			</div>
