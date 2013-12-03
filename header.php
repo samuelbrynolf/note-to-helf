@@ -6,13 +6,13 @@
 <html class="no-js"><!--<![endif]-->
 
 	<head>
+		<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
+		
 	  <meta charset="utf-8"/>
 	  <meta name="HandheldFriendly" content="True"/>
 	  <meta name="MobileOptimized" content="320"/>
 	  <meta name="viewport" content="width=device-width,initial-scale=1"/>
 	  
-	  <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
- 
 	  <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
 	  
 	  <script>
