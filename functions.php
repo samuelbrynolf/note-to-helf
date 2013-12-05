@@ -43,7 +43,7 @@ function script_handler(){
 	
 	//register scripts
 	wp_register_script('scripts', get_template_directory_uri() . '/scripts/scripts_min.js', array('jquery'), null, true);
-	wp_register_script('plugins', get_template_directory_uri() . '/scripts/plugins.js', array('jquery'), null, true);
+	wp_register_script('plugins', get_template_directory_uri() . '/scripts/plugins_min.js', array('jquery'), null, true);
 	
 	//enqueue scripts along with condiotionals
 	

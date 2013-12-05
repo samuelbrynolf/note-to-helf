@@ -4,7 +4,7 @@
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'L&auml;nk till: ', 'after' => '' ) ); ?>">
 		<section class="l-span-A12 m-entry">
 			<?php if (post_is_in_descendant_category( 63 )) { ?>
-				<h2 class="t-medium"><?php if(!is_category()){?><span><?php echo $category[0]->cat_name ?>:</span><?php } ?> <?php the_title(); ?></h2>
+				<h2 class="t-medium"><?php if(!is_category()){?><span><?php echo $category[0]->cat_name ?></span><?php } ?> <?php the_title(); ?></h2>
 			<?php } else { ?>
 				<h2 class="t-medium"><?php the_title(); ?></h2>
 			<?php } ?>

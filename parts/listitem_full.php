@@ -6,7 +6,7 @@
 			<div class="l-container">
 				
 				<div class="l-span-D5">
-					<h2 class="t-medium"><?php if (post_is_in_descendant_category( 63 )) { ?><span><?php echo $category[0]->cat_name ?>:</span><?php } ?> <?php the_title(); ?></h2>
+					<h2 class="t-medium"><?php if (post_is_in_descendant_category( 63 )) { ?><span><?php echo $category[0]->cat_name ?></span><?php } ?> <?php the_title(); ?></h2>
 					<p class="t-small">
 						<?php if(is_search()){
 							echo 'Publicerad '.get_the_time('l j F, Y').'<br/>';
